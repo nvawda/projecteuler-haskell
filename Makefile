@@ -1,4 +1,5 @@
 HSC = ghc
+HSFLAGS = -O2
 SRC = $(wildcard *.hs)
 BIN = $(subst .hs,,$(SRC))
 
