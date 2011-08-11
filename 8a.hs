@@ -5,13 +5,13 @@ import List
 
 main = print $ findMax5Product $ digits input
 
+digits str = map (\c -> ord c - ord '0') str
+
 --
 
 findMax5Product xs = maximum $ map product $ window 5 xs
 
 window n xs = takeWhile (\s -> length s == n) $ map (take n) (tails xs)
-
-digits str = map (\c -> ord c - ord '0') str
 
 --
 
